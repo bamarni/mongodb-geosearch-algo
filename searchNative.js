@@ -1,4 +1,4 @@
-var MongoClient = require('mongodb').MongoClient, geolib = require('geolib');
+var MongoClient = require('mongodb').MongoClient;
 var args = process.argv.slice(2);
 var searchPoint = [parseFloat(args[0]), parseFloat(args[1])];
 
