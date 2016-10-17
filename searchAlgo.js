@@ -7,6 +7,8 @@ var bearingDistance = Math.sqrt(2 * maxDistance * maxDistance);
 var sw = geolib.computeDestinationPoint(searchPoint, bearingDistance, 225);
 var ne = geolib.computeDestinationPoint(searchPoint, bearingDistance, 45);
 
+// https://en.wikipedia.org/wiki/Haversine_formula
+// Another option would be : https://en.wikipedia.org/wiki/Spherical_law_of_cosines
 var haversineFormula =  "var toRad = "+Math.PI / 180+"; \
   var a = 0.5 - Math.cos((this.geo.coordinates[1] - "+searchPoint.lat+") * toRad)/2 + \
     Math.cos("+searchPoint.lat+" * toRad) * Math.cos(this.geo.coordinates[1] * toRad) * \
